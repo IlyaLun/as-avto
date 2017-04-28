@@ -1,0 +1,233 @@
+@import "bourbon"
+@import "fonts.sass"
+@import "vars.sass"
+
+body
+	font-size: em(26px)
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	font-family: "OpenSansRegular", sans-serif
+	color: $nav-color
+	overflow-x: hidden
+
+.hidden
+	display: none
+
+.before
+	content: ""
+	width: 100%
+	height: 100%
+	position: absolute
+	left: 0
+	top: 0
+
+.main-head
+	position: relative
+	&::before
+			@extend .before
+			background-color: #8aa8c9
+			opacity: .85
+	min-height: 100vh
+	padding-top: 30px
+	background-size: cover
+	background-position: center
+	color: #454545
+
+.main-logo
+	img
+		max-width: 100%
+
+.main-menu
+	margin: 0
+	padding: 20px 0
+	list-style-type: none
+
+.main-nav
+	text-align: center
+
+.main-menu__item
+	display: inline-block
+	vertical-align: top
+	text-transform: uppercase
+	font-family: "RobotoRegular", sans-serif
+	font-size: em(14px)
+	a
+		display: block
+		padding: 10px
+		color: $nav-color
+		+mt(.5s)
+		&:hover
+			color: $nav-color-on-hover
+			text-decoration: none
+	&--active
+		a
+			color: lighten($nav-color, 30%)
+			&:hover
+				color: lighten($nav-color, 30%)
+
+.phone
+	padding: 20px 0
+
+.phone-wrap
+	padding: 0
+	color: lighten($nav-color, 10%)
+	font-size: em(20px)
+	font-family: Exo2Bold,sans-serif;
+	.fa-mobile
+		font-size: em(20px)
+
+.adres
+	display: inline-block
+	font-size: em(15px)
+	line-height: em(17px)
+	color: lighten($nav-color, 10%)
+	border-bottom: em(1px) dashed $nav-color
+	+mt(.5s)
+	&:hover
+		color: #fff
+		text-decoration: none
+		border-bottom: none
+	.fa
+		font-size: em(20px)
+
+.header-content
+	padding: 0
+
+.features
+	list-style: none
+	margin: 0
+	margin-bottom: 15px
+	padding: 0
+
+	.fa-check
+		padding-right: em(9px)
+
+.features__item
+	padding: 5px 0
+	color: #fff
+
+.header-content-wrap
+	padding: 20% 10%
+	text-align: center
+	h1
+		color: #fff
+
+.btn
+	display: inline-block
+	padding: 10px 15px
+	border: none
+	background-color: $btn-color
+	border-radius: 6px
+	color: $btn-text-color
+	+mt(.15s)
+	&:hover, &:active, &:focus
+		color: $btn-text-color
+		text-decoration: none
+	&:hover
+		background-color: lighten($btn-color, 10%)
+	&:active
+		background-color: darken($btn-color, 10%)
+		transform: translateY(3px)
+
+.responsive-img
+	max-width: 100%
+
+.toggle-mnu
+	display: block
+	width: 28px
+	height: 28px
+	margin-top: 14px
+
+	span:after, span:before
+		content: ""
+		position: absolute
+		left: 0
+		top: 9px
+
+	span:after
+		top: 18px
+
+	span
+		position: relative
+		display: block
+
+	span, span:after, span:before
+		width: 100%
+		height: 2px
+		background-color: $white
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+
+	&.on span
+		background-color: transparent
+
+	&.on span:before
+		transform: rotate(45deg) translate(-1px, 0px)
+
+	&.on span:after
+		transform: rotate(-45deg) translate(6px, -7px)
+
+.toggle-mnu
+	position: absolute
+	top: 0
+	right: 15px
+
+//Mobile menu styles
+.hidden-mnu
+	display: none
+	background-color: $bg-mnu-hamburger
+	opacity: .8
+	.main-menu
+		padding: 20px 0
+	.main-menu__item
+		display: block
+		&:hover
+			background-color: $accent
+		&--active
+			&:hover
+				background-color: transparent
+		a
+			display: block
+			padding: 10px
+			color: #cecece
+			+mt(.5s)
+			&:hover
+				color: #fff
+				text-decoration: none
+		&--active
+			a
+				color: $accent
+				&:hover
+					color: $accent
+
+.s-wide
+	padding: 80px 0
+	text-align: center
+	h2
+		margin-top: 0
+		color: $accent
+
+.s-dark
+	background-color: $bg-mnu-hamburger
+	color: #fff
+
+.s-adv-item
+	font-size: em(15px)
+	font-family: "OpenSansLight", sans-serif
+	color: darken($white, 10%)
+	line-height: em(22px)
+	margin-bottom: 40px
+	h3
+		margin: 0
+		font-size: em(20px)
+		color: $white
+		text-transform: uppercase
+		font-family: Exo2Bold,sans-serif;
+		span
+			font-size: em(34px)
+			color: $accent
+	p
+		font-size: em(18px)
+		margin-top: 10px

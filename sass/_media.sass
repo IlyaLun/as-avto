@@ -1,0 +1,104 @@
+@import "bourbon"
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+	.phone
+		padding-right: 50px
+
+	.responsive-img
+		max-width: 150%
+
+	.main-logo
+		img
+			max-width: 40%
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.title
+		font-size: em(20px)
+	.header-content-wrap
+		padding: 5%
+	.main-logo
+		img
+			max-width: 50%
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.main-logo
+		img
+			max-width: 50%
+	/*Disable Animation on Mobile Devices*/
+	.animated
+		/*CSS transitions*/
+		-o-transition-property: none !important
+		-moz-transition-property: none !important
+		-ms-transition-property: none !important
+		-webkit-transition-property: none !important
+		transition-property: none !important
+		/*CSS transforms*/
+		-o-transform: none !important
+		-moz-transform: none !important
+		-ms-transform: none !important
+		-webkit-transform: none !important
+		transform: none !important
+		/*CSS animations*/
+		-webkit-animation: none !important
+		-moz-animation: none !important
+		-o-animation: none !important
+		-ms-animation: none !important
+		animation: none !important
+
+	.menu-line
+		text-align: center
+		.main-logo
+			display: inline-block
+		.phone
+			text-align: center
+			padding: 0
+			// margin-top: 25px
+			margin: 15px
+		.toggle-mnu
+			top: -80px
+		.hidden-mnu
+			text-transform: uppercase
+			// font-size: em(15px)
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+

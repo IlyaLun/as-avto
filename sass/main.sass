@@ -1,0 +1,110 @@
+@import "bourbon"
+@import "vars.sass"
+
+//Load Libs SASS
+@import "app/libs/animate/animate.sass"
+@import "app/libs/font-awesome/css/font-awesome.sass"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+//Custom Styles Here
+
+.s-white
+	background-color: #fff
+
+.s-gray
+	background-color: $s-gray-color
+
+.s-features
+	h2
+		margin-bottom: em(35px)
+		color: $bg-mnu-hamburger
+
+.features-item
+	margin-bottom: 50px
+	p
+		margin: 0
+		color: lighten($bg-mnu-hamburger, 10%)
+	h4
+		margin-top: 10px
+		margin-bottom: 10px;
+		padding-bottom: 10px
+		position: relative
+		color: $bg-mnu-hamburger
+		&::before
+			content: ''
+			position: absolute
+			bottom: 0
+			height: 1px
+			width: 60%
+			left: 20%
+			background-color: lighten($bg-mnu-hamburger, 35%)
+	i
+		font-size: em(40px)
+		color: $accent
+
+.testimonials-item
+	text-align: center
+	font-size: em(14px)
+	margin-top: 60px
+	h4
+		margin-top: 35px
+		text-transform: uppercase
+		font-size: em(16px)
+		font-family: "OpenSansLight", sans-serif
+		color: $bg-mnu-hamburger
+	.rounded-img-wrap
+		position: relative
+		width: 98px
+		height: 98px
+		border-color: $bg-mnu-hamburger
+		// box-shadow: rgba(0,0,0,.15) 0 0 5px
+	.testimonials-descr
+		position: relative
+		&::before
+			content: ""
+			position: absolute
+			top: -16px
+			transform: translateX(-16px)
+			@include triangle(32px, $bg-mnu-hamburger, up)
+		margin-top: 40px
+		font-size: em(16px)
+		background-color: $bg-mnu-hamburger
+		color: #fff
+		padding: 20px 30px
+		border-radius: 15px
+
+.rounded-img-wrap
+	border-radius: 10em
+	border: $accent 5px solid
+	overflow: hidden
+	width: 136px
+	height: 136px
+	text-align: center
+	margin: auto
+	img
+		max-width: 100%
+
+//ALWAYS END
+@import "media"
