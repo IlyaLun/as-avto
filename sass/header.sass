@@ -11,6 +11,29 @@ body
 	color: $nav-color
 	overflow-x: hidden
 
+form
+	label
+		display: block
+		margin-bottom: 10px
+		text-align: left
+		cursor: pointer
+		span
+			display: block
+			font-size: em(15px)
+			color: #fff
+			opacity: .4
+			padding: 0 0 10px 0
+		input
+			display: block
+			width: 100%
+			background-color: rgba(255,255,255, .8)
+			border: 2px solid rgba(255,255,255, .8)
+			padding: 10px 12px
+			border-radius: 2px
+			color: #222
+			&:focus
+				border: 2px solid $accent
+
 .hidden
 	display: none
 
@@ -231,3 +254,19 @@ body
 	p
 		font-size: em(18px)
 		margin-top: 10px
+
+.contact-form
+	padding: 25px
+	background-color: darken($bg-mnu-hamburger, 5%)
+	border-radius: 5px
+	color: #fff
+	&-head
+		h4
+			margin: 0
+			text-transform: uppercase
+		p
+			color: #fff
+			opacity: .6
+	.btn
+		margin-top: 30px
+
