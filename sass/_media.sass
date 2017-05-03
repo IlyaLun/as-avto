@@ -30,6 +30,9 @@
 	.main-logo
 		img
 			max-width: 50%
+
+	.main-menu__item
+		display: block
 	/*Disable Animation on Mobile Devices*/
 	.animated
 		/*CSS transitions*/
@@ -58,22 +61,27 @@
 		.phone
 			text-align: center
 			padding: 0
-			// margin-top: 25px
 			margin: 15px
 		.toggle-mnu
 			top: -80px
 		.hidden-mnu
 			text-transform: uppercase
-			// font-size: em(15px)
+
+	.main-foot
+		.footer-copyright
+			padding: 0 0 25px 0
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
-
+	.main-foot
+		.footer-copyright
+			padding: 0 0 25px 0
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
-	/**/
+	.main-foot
+		.footer-copyright
+			padding: 0 0 20px 0
 
 
 /*==========  Mobile First Method  ==========*/

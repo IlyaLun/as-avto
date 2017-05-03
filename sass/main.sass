@@ -136,5 +136,42 @@ body textarea:required:valid
 		text-decoration: none
 		color: #fff
 
+.main-foot
+	a
+		color: lighten($bg-mnu-hamburger, 25%)
+	color: lighten($bg-mnu-hamburger, 25%)
+	p
+		font-size: em(12px)
+		color: lighten($bg-mnu-hamburger, 25%)
+	background-color: darken($bg-mnu-hamburger, 10%)
+	.main-menu__item
+		a
+			text-transform: none
+			color: lighten($bg-mnu-hamburger, 25%)
+			&:hover
+				color: #fff
+
+.footer-social
+	text-align: center
+	.fa
+		font-size: em(20px)
+	a
+		display: inline-block
+		padding: 27px 10px
+		+mt(.5s)
+		&:hover
+			color: #fff
+
+.footer-copyright
+	padding: 27px 0
+	text-align: center
+
+.copyright
+	font-size: em(12px)
+	+mt(.5s)
+	&:hover
+		color: #fff
+		text-decoration: none
+
 //ALWAYS END
 @import "media"
