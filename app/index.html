@@ -117,7 +117,7 @@
 								<li class="features__item"><i class="fa fa-check" aria-hidden="true"></i>Лучшие инструкторы</li>
 							</ul>
 
-							<a href="#" class="btn">Заказать обратный звонок</a>
+							<a href="#callback" class="btn popup">Заказать обратный звонок</a>
 
 						</div>
 
@@ -420,7 +420,32 @@
 
 	</footer>
 
-	<div class="hidden"></div>
+	<div class="hidden">
+
+		<form id="callback" class="contact-form form-callback">
+
+			<div class="contact-form-head">
+				<h4>Остались вопросы?</h4>
+				<p>Оставьте свой номер и мы с Вами свяжемся</p>
+			</div>
+
+			<label>
+				<span>Ваше имя</span>
+				<input type="text" name="Имя" placeholder="Андрей">
+			</label>
+
+			<label>
+				<span>Ваш телефон</span>
+				<input type="text" name="Телефон" placeholder="81234567890">
+			</label>
+
+			<div class="text-center">
+				<button class="btn">Отправить</button>
+			</div>
+
+		</form>
+
+	</div>
 
 	<!--[if lt IE 9]>
 	<script src="libs/html5shiv/es5-shim.min.js"></script>

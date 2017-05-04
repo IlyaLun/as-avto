@@ -35,6 +35,7 @@ gulp.task('scripts', function() {
 		'./app/libs/waypoints/waypoints.min.js',
 		'./app/libs/animate/animate-css.js',
 		'./app/libs/animateNumber/jquery.animateNumber.min.js',
+		'./app/libs/magnificPopup/jquery.magnific-popup.min.js',
 		'./app/libs/equalHeight/jquery.equalheights.min.js',
 		])
 		.pipe(concat('libs.js'))
