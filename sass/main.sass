@@ -177,6 +177,26 @@ body textarea:required:valid
 	position: relative
 	margin: auto
 	max-width: 320px
+	overflow: hidden
+
+.success
+	display: flex
+	color: #fff
+	background-color: $bg-mnu-hamburger
+	position: absolute
+	z-index: 1
+	left: 0
+	top: -100%
+	width: 100%
+	height: 100%
+	opacity: 0
+	+mt(.5s)
+	p
+		display: flex
+		margin: auto
+	&.active-popup
+		top: 0
+		opacity: 1
 
 //Magnific popup customize
 .mfp-bg
@@ -533,6 +553,27 @@ img.mfp-img
 	.mfp-container
 		padding-left: 6px
 		padding-right: 6px
+
+.top
+	position: fixed
+	bottom: 15px
+	right: -120px
+	width: 50px
+	height: 50px
+	background-color: #fff
+	border-radius: 10em
+	cursor: pointer
+	text-align: center
+	opacity: .4
+	+mt(.25s)
+	.fa
+		font-size: 35px
+		margin-top: 5px
+		color: $bg-mnu-hamburger
+	&.active
+		right: 20px
+	&:hover
+		opacity: .8
 
 //ALWAYS END
 @import "media"

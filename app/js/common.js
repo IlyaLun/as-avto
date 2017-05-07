@@ -28,41 +28,14 @@ $(function() {
 		offset: '80%'
 	});
 
+	$("body").append('<div class="top"><i class="fa fa-angle-double-up">');
+
+	$("body").on("click", ".top", function() {
+		$("html, body").animate({scrollTop: 0}, "slow");
+	});
+
 // Magnific popup
 	$(".popup").magnificPopup();
-
-	// $(".popup").magnificPopup({
-	// 	mainClass: 'mfp-zoom-in',
-	// 	// delegate: 'a',
-	// 	type: 'inline',
-	// 	tLoading: '',
-	// 	gallery:{
-	// 		enabled:true,
-	// 	},
-	// 	removalDelay: 300,
-	// 	callbacks: {
-	// 		beforeChange: function() {
-	// 			this.items[0].src = this.items[0].src + '?=' + Math.random();
-	// 		},
-	// 		open: function() {
-	// 			$.magnificPopup.instance.next = function() {
-	// 				var self = this;
-	// 				self.wrap.removeClass('mfp-image-loaded');
-	// 				setTimeout(function() { $.magnificPopup.proto.next.call(self); }, 120);
-	// 			}
-	// 			$.magnificPopup.instance.prev = function() {
-	// 				var self = this;
-	// 				self.wrap.removeClass('mfp-image-loaded');
-	// 				setTimeout(function() { $.magnificPopup.proto.prev.call(self); }, 120);
-	// 			}
-	// 		},
-	// 		imageLoadComplete: function() {
-	// 			var self = this;
-	// 			setTimeout(function() { self.wrap.addClass('mfp-image-loaded'); }, 16);
-	// 		}
-	// 	}
-	// });
-
 
 	//Toggle Mnu Function
 	$(".toggle-mnu").click(function() {
@@ -98,13 +71,23 @@ $(function() {
 			url: "mail.php", //Change
 			data: th.serialize()
 		}).done(function() {
-			alert("Thank you!");
+			$(".form-callback .succes").addClass(".active-popup");
 			setTimeout(function() {
 				// Done Functions
+				$(".form-callback .succes").removeClass(".active-popup");
 				th.trigger("reset");
-			}, 1000);
+				$.magnificPopup.close();
+			}, 3000);
 		});
 		return false;
+	});
+
+	$(window).scroll(function() {
+		if($(this).scrollTop() > $(this).height()) {
+			$(".top").addClass("active");
+		} else {
+			$(".top").removeClass("active");
+		}
 	});
 
 });
